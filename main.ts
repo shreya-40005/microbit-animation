@@ -54,9 +54,18 @@ input.onGesture(Gesture.Shake, function () {
         . # # # .
         `)
 })
-input.onLogoEvent(TouchButtonEvent.Touched, function () {
-	
-})
 let ball = 0
 let PacMan = 0
 basic.showIcon(IconNames.Happy)
+basic.forever(function () {
+    while (input.logoIsPressed()) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `,0)
+    }
+    basic.clearScreen()
+})
