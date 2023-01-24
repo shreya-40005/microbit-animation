@@ -58,14 +58,16 @@ let ball = 0
 let PacMan = 0
 basic.showIcon(IconNames.Happy)
 basic.forever(function () {
-    while (input.logoIsPressed()) {
-        basic.showLeds(`
+    if (input.logoIsPressed()) {
+        while (input.logoIsPressed()) {
+            basic.showLeds(`
             # # # # #
             # # # # #
             # # # # #
             # # # # #
             # # # # #
             `,0)
+        }
+        basic.clearScreen()
     }
-    basic.clearScreen()
 })
