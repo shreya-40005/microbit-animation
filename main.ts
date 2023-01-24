@@ -17,42 +17,44 @@ input.onButtonPressed(Button.B, function () {
     basic.showString("Bye!")
 })
 input.onGesture(Gesture.Shake, function () {
-    ball = 0
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . # # # .
-        . # # # .
-        . # # # .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # # # .
-        . # # # .
-        . # # # .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . # # # .
-        . # # # .
-        . # # # .
-        . . . . .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # # # .
-        . # # # .
-        . # # # .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . # # # .
-        . # # # .
-        . # # # .
-        `)
+    for (let index = 0; index < 4; index++) {
+        ball = 0
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            `)
+    }
 })
 let ball = 0
 let PacMan = 0
